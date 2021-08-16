@@ -53,9 +53,9 @@ st.write("""
 
 all_data = all_data.dropna(how='all')   # To drop the rows with NAN
 
-### find 'Or' and delete it.
+### find 'Order Date' in 'Order Date' and delete it.
 st.write("""
-***Find 'Or' and delete it***
+***Find and delete all rows in 'Order Date' with 'Order Date' instead of a real date ***
 """)
 contains_or = all_data[all_data['Order Date'].str[0:2] == 'Or']
 st.dataframe(contains_or)
